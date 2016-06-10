@@ -17,7 +17,7 @@ public class Auth0CORSFilter implements Filter {
         response.setHeader("Access-Control-Allow-Origin", "*");
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");
-        response.setHeader("Access-Control-Allow-Headers", "Authorization");
+        response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type, Content-Length, Accept, X-Requested-With, X-XSRF-TOKEN");
         if (request.getMethod().equals("OPTIONS")) {
             return;
         }
